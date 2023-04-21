@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "324013399715",
+    "firebase_url": "https://lvdk-f1979-default-rtdb.firebaseio.com",
+    "project_id": "lvdk-f1979",
+    "storage_bucket": "lvdk-f1979.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324013399715:android:fd916207bed6b413b2e916",
+        "android_client_info": {
+          "package_name": "com.example.lvdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324013399715-37tf3hcv9aa30987v65up8roinmr9k9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzlHGE0EPaD5_JRTCAdYUfXhjRfBQf2i0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324013399715-37tf3hcv9aa30987v65up8roinmr9k9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

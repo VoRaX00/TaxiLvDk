@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegActivity">
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="405dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:hint="Введите email"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.429"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="405dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="4dp"
+        android:autoText="false"
+        android:elegantTextHeight="false"
+        android:ems="10"
+        android:hint="Введите пароль"
+        android:inputType="textPassword"
+        android:textIsSelectable="false"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/emailText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailText"
+        app:layout_constraintTop_toBottomOf="@+id/emailText"
+        android:autofillHints=""
+        tools:ignore="Deprecated" />
+
+    <Button
+        android:id="@+id/bSignUp"
+        android:layout_width="385dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickReg"
+        android:text="Зарегистрироваться"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/passwordText"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="@+id/passwordText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText"
+        tools:ignore="UsingOnClickInXml,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/bSignIn"
+        android:layout_width="381dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickIn"
+        android:text="Войти"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/bSignUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/bSignUp"
+        tools:ignore="UsingOnClickInXml,VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/UserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="296dp"
+        android:text="Выйти"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="onClickStart"
+        android:text="Начать"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/UserEmail"
+        app:layout_constraintStart_toStartOf="@+id/UserEmail"
+        app:layout_constraintTop_toBottomOf="@+id/UserEmail"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/bExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="onClickSignOut"
+        android:text="Выход"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/bStart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bStart"
+        app:layout_constraintTop_toBottomOf="@+id/bStart"
+        tools:ignore="UsingOnClickInXml" />
+</androidx.constraintlayout.widget.ConstraintLayout>
