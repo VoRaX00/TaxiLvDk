@@ -181,7 +181,7 @@ class RegActivity : AppCompatActivity() {
             mDataBase.push().setValue(newUser)
         }
 
-        val intentReg = Intent(this, GeneralActivity::class.java)
+        val intentReg = Intent(this, MapsActivity::class.java)
         startActivity(intentReg)
     }
 
