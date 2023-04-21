@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.core.app.ActivityCompat
 
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -60,5 +61,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             return
         }
         mMap.isMyLocationEnabled = true
+
+        mMap.setOnMarkerClickListener {marker ->
+            binding.deleteMarkers.visibility = View.VISIBLE
+            binding.remmarkerimage.setOnClickListener{
+                marker.remove()
+                binding.deleteMarkers.visibility = View.GONE
+            }
+            true
+        }
     }
 }
