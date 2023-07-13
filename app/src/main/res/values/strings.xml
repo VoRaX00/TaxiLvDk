@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">lvDk</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
+    <string name="my_position">Моё местоположение</string>
+    <string name="where_from">Откуда</string>
+    <string name="where">Куда</string>
+    <string name="make_an_order">Сделать заказ</string>
 </resources>

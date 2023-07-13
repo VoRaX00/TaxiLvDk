@@ -98,15 +98,28 @@ class RegActivity : AppCompatActivity() {
         val password = textPassword.text.toString()
 
         if(email.isNotEmpty() && password.isNotEmpty()) {
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){ task ->
-                if (task.isSuccessful)
-                {
-                    sendEmailVer()
-                    verification = true
+            mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        sendEmailVer()
+                        verification = true
+                    } else {
+                        showNotSigned()
+                    }
                 }
-                else
-                {
+
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    showSigned()
+                    val id = mDataBase.key.toString()
+                    val newUser = User(email,password,id)
+
+                    mDataBase.push().setValue(newUser)
+
+                    //Toast.makeText(this, "User SingIn successful",Toast.LENGTH_SHORT).show()
+                } else {
                     showNotSigned()
+                    //Toast.makeText(this, "User SignIn failed",Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -172,14 +185,14 @@ class RegActivity : AppCompatActivity() {
 
     fun onClickStart(view: View)
     {
-        if(verification) {
+       /* if(verification) {
             val id = mDataBase.key.toString()
             val email = textEmail.text.toString()
             val password = textPassword.text.toString()
             val newUser = User(email,password,id)
 
             mDataBase.push().setValue(newUser)
-        }
+        }*/
 
         val intentReg = Intent(this, MapsActivity::class.java)
         startActivity(intentReg)
